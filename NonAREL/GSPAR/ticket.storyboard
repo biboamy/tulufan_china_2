@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="uWu-mK-Lhe">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--Native view controller-->
+        <scene sceneID="5pA-cH-BnI">
+            <objects>
+                <glkViewController preferredFramesPerSecond="30" id="uWu-mK-Lhe" userLabel="Native view controller" customClass="GPSARViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="zdP-Ic-GWF"/>
+                        <viewControllerLayoutGuide type="bottom" id="Brp-Cv-YrY"/>
+                    </layoutGuides>
+                    <glkView key="view" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" drawableDepthFormat="24" enableSetNeedsDisplay="NO" id="ouu-7c-sFl">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JT5-BO-sXX">
+                                <rect key="frame" x="133" y="281" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="evo-NN-pLf">
+                                <rect key="frame" x="139" y="268" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wlP-rp-Ejh">
+                                <rect key="frame" x="154" y="246" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EQ3-Zr-msk">
+                                <rect key="frame" x="128" y="297" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.60000002384185791" green="0.40000000596046448" blue="0.20000000298023224" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="JT5-BO-sXX" firstAttribute="centerY" secondItem="ouu-7c-sFl" secondAttribute="centerY" id="2Ry-UK-x7c"/>
+                            <constraint firstItem="EQ3-Zr-msk" firstAttribute="centerX" secondItem="ouu-7c-sFl" secondAttribute="centerX" id="MWm-3X-ryU"/>
+                            <constraint firstItem="Brp-Cv-YrY" firstAttribute="top" secondItem="EQ3-Zr-msk" secondAttribute="bottom" constant="20" id="MnG-jI-JbH"/>
+                            <constraint firstItem="wlP-rp-Ejh" firstAttribute="centerY" secondItem="ouu-7c-sFl" secondAttribute="centerY" id="U7p-I5-h6W"/>
+                            <constraint firstItem="wlP-rp-Ejh" firstAttribute="centerX" secondItem="ouu-7c-sFl" secondAttribute="centerX" constant="40" id="Wn0-IP-q2D"/>
+                            <constraint firstItem="JT5-BO-sXX" firstAttribute="centerX" secondItem="ouu-7c-sFl" secondAttribute="centerX" constant="-85" id="b5x-4d-abb"/>
+                            <constraint firstItem="evo-NN-pLf" firstAttribute="centerX" secondItem="ouu-7c-sFl" secondAttribute="centerX" constant="-45" id="wZp-1D-JgH"/>
+                            <constraint firstItem="evo-NN-pLf" firstAttribute="centerY" secondItem="ouu-7c-sFl" secondAttribute="centerY" constant="30" id="ze0-7U-f9f"/>
+                        </constraints>
+                        <connections>
+                            <outlet property="delegate" destination="uWu-mK-Lhe" id="VGr-k1-3jt"/>
+                        </connections>
+                    </glkView>
+                    <connections>
+                        <outlet property="dateLabel" destination="EQ3-Zr-msk" id="wii-Kp-73d"/>
+                        <outlet property="glkView" destination="ouu-7c-sFl" id="vca-Fa-trv"/>
+                        <outlet property="m_Label1" destination="evo-NN-pLf" id="Cvn-cm-wEe"/>
+                        <outlet property="m_Label2" destination="JT5-BO-sXX" id="hKd-YL-3GP"/>
+                        <outlet property="m_Label3" destination="wlP-rp-Ejh" id="fQU-Fw-1xh"/>
+                    </connections>
+                </glkViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bhg-Y3-seg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="467" y="403"/>
+        </scene>
+    </scenes>
+</document>

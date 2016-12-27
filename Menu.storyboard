@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="8ym-cp-o2K">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--Menu View Controller-->
+        <scene sceneID="Iv5-gp-eTP">
+            <objects>
+                <viewController id="8ym-cp-o2K" customClass="MenuViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="WmC-NA-lkn"/>
+                        <viewControllerLayoutGuide type="bottom" id="4ea-z3-aj7"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Tuc-QR-lKh">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="C0Q-eb-NHe">
+                                <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </webView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" misplaced="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="TMc-qj-Wm6">
+                                <rect key="frame" x="144" y="274" width="20" height="20"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="C0Q-eb-NHe" secondAttribute="trailing" id="0yY-5z-AYY"/>
+                            <constraint firstItem="TMc-qj-Wm6" firstAttribute="centerY" secondItem="Tuc-QR-lKh" secondAttribute="centerY" id="Gap-cy-9gp"/>
+                            <constraint firstItem="TMc-qj-Wm6" firstAttribute="centerX" secondItem="Tuc-QR-lKh" secondAttribute="centerX" id="RBy-Rc-E1i"/>
+                            <constraint firstItem="4ea-z3-aj7" firstAttribute="top" secondItem="C0Q-eb-NHe" secondAttribute="bottom" id="Y5g-Pi-w8N"/>
+                            <constraint firstItem="C0Q-eb-NHe" firstAttribute="centerX" secondItem="Tuc-QR-lKh" secondAttribute="centerX" id="aQl-iW-77L"/>
+                            <constraint firstItem="C0Q-eb-NHe" firstAttribute="centerY" secondItem="Tuc-QR-lKh" secondAttribute="centerY" id="xcR-rq-nOi"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="activityIndicator" destination="TMc-qj-Wm6" id="PLz-n7-46V"/>
+                        <outlet property="tutorialsView" destination="C0Q-eb-NHe" id="oQp-Bk-J0A"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gjd-xO-W92" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="468" y="342"/>
+        </scene>
+    </scenes>
+</document>

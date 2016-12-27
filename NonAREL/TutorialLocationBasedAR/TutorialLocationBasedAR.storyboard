@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="uWu-mK-Lhe">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--Native view controller-->
+        <scene sceneID="5pA-cH-BnI">
+            <objects>
+                <glkViewController preferredFramesPerSecond="30" id="uWu-mK-Lhe" userLabel="Native view controller" customClass="LocationBasedARViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="zdP-Ic-GWF"/>
+                        <viewControllerLayoutGuide type="bottom" id="Brp-Cv-YrY"/>
+                    </layoutGuides>
+                    <glkView key="view" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" drawableDepthFormat="24" enableSetNeedsDisplay="NO" id="ouu-7c-sFl">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pS5-JU-Je6">
+                                <rect key="frame" x="139" y="274" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fVY-H9-Mix">
+                                <rect key="frame" x="139" y="232" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M9z-ik-i9o">
+                                <rect key="frame" x="99" y="322" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="M9z-ik-i9o" firstAttribute="centerY" secondItem="ouu-7c-sFl" secondAttribute="centerY" id="5BK-Ye-Rpf"/>
+                            <constraint firstItem="fVY-H9-Mix" firstAttribute="centerY" secondItem="ouu-7c-sFl" secondAttribute="centerY" id="N7i-Z8-MW3"/>
+                            <constraint firstItem="M9z-ik-i9o" firstAttribute="centerX" secondItem="ouu-7c-sFl" secondAttribute="centerX" constant="-85" id="VX1-E2-KCd"/>
+                            <constraint firstItem="pS5-JU-Je6" firstAttribute="centerY" secondItem="ouu-7c-sFl" secondAttribute="centerY" constant="30" id="WZm-pC-Oz1"/>
+                            <constraint firstItem="fVY-H9-Mix" firstAttribute="centerX" secondItem="ouu-7c-sFl" secondAttribute="centerX" constant="40" id="bhZ-uY-E5u"/>
+                            <constraint firstItem="pS5-JU-Je6" firstAttribute="centerX" secondItem="ouu-7c-sFl" secondAttribute="centerX" constant="-45" id="pVY-DA-UEp"/>
+                        </constraints>
+                        <connections>
+                            <outlet property="delegate" destination="uWu-mK-Lhe" id="VGr-k1-3jt"/>
+                        </connections>
+                    </glkView>
+                    <connections>
+                        <outlet property="glkView" destination="ouu-7c-sFl" id="vca-Fa-trv"/>
+                        <outlet property="m_Label1" destination="pS5-JU-Je6" id="RQR-fu-P5j"/>
+                        <outlet property="m_Label2" destination="M9z-ik-i9o" id="tMe-Xb-65u"/>
+                        <outlet property="m_Label3" destination="fVY-H9-Mix" id="0MT-1p-bWy"/>
+                    </connections>
+                </glkViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bhg-Y3-seg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="467" y="403"/>
+        </scene>
+    </scenes>
+</document>

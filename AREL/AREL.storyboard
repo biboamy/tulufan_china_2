@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="1Rt-U7-myv">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--AREL view controller-->
+        <scene sceneID="cWT-lp-7RN">
+            <objects>
+                <glkViewController preferredFramesPerSecond="30" id="1Rt-U7-myv" userLabel="AREL view controller" customClass="ExampleARELViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="dMg-CY-bPG"/>
+                        <viewControllerLayoutGuide type="bottom" id="HtB-qE-oOC"/>
+                    </layoutGuides>
+                    <glkView key="view" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" drawableDepthFormat="24" enableSetNeedsDisplay="NO" id="kYg-bN-kaM">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <progressView hidden="YES" opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Mip-Kn-cKx">
+                                <rect key="frame" x="8" y="558" width="304" height="2"/>
+                            </progressView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="loading_2048_bg.png" translatesAutoresizingMaskIntoConstraints="NO" id="iHU-jI-ISO">
+                                <rect key="frame" x="48" y="48" width="224" height="472"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="2048" id="DZs-x2-0Ed"/>
+                                    <constraint firstAttribute="height" constant="2048" id="uUP-vU-iQM"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="loading_320_568_alpha.png" translatesAutoresizingMaskIntoConstraints="NO" id="NNk-wv-zlp">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                            </imageView>
+                            <webView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="u7T-L0-sFn">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </webView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="u7T-L0-sFn" secondAttribute="bottom" id="1K6-tK-mcS"/>
+                            <constraint firstItem="HtB-qE-oOC" firstAttribute="top" secondItem="Mip-Kn-cKx" secondAttribute="bottom" constant="8" id="BC2-oP-7DG"/>
+                            <constraint firstAttribute="trailing" secondItem="Mip-Kn-cKx" secondAttribute="trailing" constant="8" id="DJz-la-yWC"/>
+                            <constraint firstItem="Mip-Kn-cKx" firstAttribute="leading" secondItem="kYg-bN-kaM" secondAttribute="leading" constant="8" id="Kb5-La-qJX"/>
+                            <constraint firstAttribute="trailing" secondItem="u7T-L0-sFn" secondAttribute="trailing" id="PHn-1z-f5I"/>
+                            <constraint firstItem="NNk-wv-zlp" firstAttribute="height" secondItem="u7T-L0-sFn" secondAttribute="height" id="Pvv-kJ-S1q"/>
+                            <constraint firstItem="NNk-wv-zlp" firstAttribute="centerY" secondItem="u7T-L0-sFn" secondAttribute="centerY" id="YGY-uT-Ha6"/>
+                            <constraint firstItem="NNk-wv-zlp" firstAttribute="width" secondItem="u7T-L0-sFn" secondAttribute="width" id="cch-i4-nbO"/>
+                            <constraint firstItem="iHU-jI-ISO" firstAttribute="leading" secondItem="u7T-L0-sFn" secondAttribute="leading" id="eOM-gM-Fwc"/>
+                            <constraint firstItem="u7T-L0-sFn" firstAttribute="top" secondItem="kYg-bN-kaM" secondAttribute="top" id="s0I-Cj-cgZ"/>
+                            <constraint firstItem="NNk-wv-zlp" firstAttribute="leading" secondItem="u7T-L0-sFn" secondAttribute="leading" id="til-Ph-UXX"/>
+                            <constraint firstItem="u7T-L0-sFn" firstAttribute="leading" secondItem="kYg-bN-kaM" secondAttribute="leading" id="wPL-oY-3tI"/>
+                            <constraint firstItem="iHU-jI-ISO" firstAttribute="top" secondItem="u7T-L0-sFn" secondAttribute="top" id="yGh-zf-0Wa"/>
+                        </constraints>
+                        <connections>
+                            <outlet property="delegate" destination="1Rt-U7-myv" id="ncM-ei-KYy"/>
+                        </connections>
+                    </glkView>
+                    <connections>
+                        <outlet property="arelWebView" destination="u7T-L0-sFn" id="osb-Ld-f7o"/>
+                        <outlet property="glkView" destination="kYg-bN-kaM" id="EMQ-Ye-pOV"/>
+                        <outlet property="m_splashScreenImage" destination="NNk-wv-zlp" id="wx3-3j-DAN"/>
+                        <outlet property="m_splashScreenImage_bg" destination="iHU-jI-ISO" id="171-Lb-WqC"/>
+                        <outlet property="progressView" destination="Mip-Kn-cKx" id="6xq-o9-wVA"/>
+                    </connections>
+                </glkViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="C1D-8b-38s" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="442" y="493"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="loading_2048_bg.png" width="2048" height="2048"/>
+        <image name="loading_320_568_alpha.png" width="320" height="568"/>
+    </resources>
+</document>
