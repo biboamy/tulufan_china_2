@@ -2,7 +2,7 @@
 A tourist application for Tulufan, Xinjiang, China
 
 ## Version
-Version 1
+Version 2
 
 ## Feature
 - Interaction with 3D historical buildings/people through AR
